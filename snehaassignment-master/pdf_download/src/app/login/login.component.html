@@ -1,0 +1,50 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-12 text-center py-5">
+          <h2>Welcome to Our Website</h2>
+      </div>
+  </div>
+
+
+  <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+          <div class="login-container">
+              <h3 class="login-header">Login</h3>
+              <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+                <!-- Username or Email -->
+                <div class="mb-3">
+                  <label for="usernameOrEmail" class="form-label">Username or Email</label>
+                  <input type="text" class="form-control" id="usernameOrEmail" name="usernameOrEmail" placeholder="Enter your username or email" required 
+                       [(ngModel)]="usernameOrEmail" #usernameOrEmailField="ngModel">
+                  <div *ngIf="usernameOrEmailField.invalid && (usernameOrEmailField.dirty || usernameOrEmailField.touched)" class="text-danger">
+                    <div *ngIf="usernameOrEmailField.errors?.['required']">Username or Email is required.</div>
+                  </div>
+                </div>
+                <!-- Password -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required 
+                       [(ngModel)]="password" #passwordField="ngModel">
+                  <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)" class="text-danger">
+                    <div *ngIf="passwordField.errors?.['required']">Password is required.</div>
+                  </div>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary login-btn" [disabled]="loginForm.invalid">Login</button>
+              </form>  <div class="text-center mt-3"></div>
+              <div *ngIf="errorMessage" class="text-danger">
+                {{ errorMessage }}
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Third Row (Empty or Optional Content) -->
+  <div class="row">
+      <div class="col-12 text-center py-5">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+  </div>

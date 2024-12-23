@@ -1,0 +1,27 @@
+[
+  {
+    "userNameOrEmail": "john_doe",
+    "password": "password123",
+    "emailAddress": "john.doe@example.com"
+  },
+  {
+    "userNameOrEmail": "jane_smith",
+    "password": "qwerty456",
+    "emailAddress": "jane.smith@example.com"
+  },
+  {
+    "userNameOrEmail": "mike_brown",
+    "password": "abcde789",
+    "emailAddress": "mike.brown@example.com"
+  },
+  {
+    "userNameOrEmail": "emily_white",
+    "password": "securePass!",
+    "emailAddress": "emily.white@example.com"
+  },
+  {
+    "userNameOrEmail": "sneha_sasane",
+    "password": "pass@2024",
+    "emailAddress": "sneha.sasane@example.com"
+  }
+]

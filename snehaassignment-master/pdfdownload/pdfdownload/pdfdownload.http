@@ -1,0 +1,6 @@
+@pdfdownload_HostAddress = http://localhost:5285
+
+GET {{pdfdownload_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

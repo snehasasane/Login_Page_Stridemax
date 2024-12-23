@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      <div class="navbar-text">
+        <div class="row">
+          <div class="col-6">
+            <span>{{ emailAddress }}</span>
+          </div>
+          <div class="col-6 text-end">
+            <button (click)="logout()" type="button" class="btn btn-light ms-3">LogOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div></div>
+<!-- Welcome text centered -->
+<div class="container mt-3 text-center">
+  <h2>Welcome, {{ userName }}!</h2>
+</div>
+
+<div class="container mt-5 w-55">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pdf Name</th>
+        <th scope="col">Action</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of pdfname; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{replcaeext(item)}}</td>
+        <button (click)="downloadPDF(replcaeext(item),true)" class="btn btn-link text-primary">View</button>
+          <button (click)="downloadPDF(replcaeext(item), false)"  class="btn btn-link text-primary">Download</button>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdfFrame" width="100%" height="100%"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

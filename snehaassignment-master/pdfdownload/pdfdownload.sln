@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdfdownload", "pdfdownload\pdfdownload.csproj", "{65DDC158-CFD7-482F-85AC-374064CD2726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65DDC158-CFD7-482F-85AC-374064CD2726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DDC158-CFD7-482F-85AC-374064CD2726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DDC158-CFD7-482F-85AC-374064CD2726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DDC158-CFD7-482F-85AC-374064CD2726}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6700D6E9-9A7C-4F38-88F1-0DF3DE108F5F}
+	EndGlobalSection
+EndGlobal
